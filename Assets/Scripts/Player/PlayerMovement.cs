@@ -28,6 +28,11 @@ public class PlayerMovement : MonoBehaviour
 
     bool IsPositionValid(Vector2 pos)
     {
-        return _levelArea.Collider.bounds.Contains(pos);
+        foreach (var collider in _levelArea.Colliders)
+        {
+            if (collider.bounds.Contains(pos)) return true;
+        }
+
+        return false;
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelArea : MonoBehaviour
 {
     [SerializeField]
-    private Collider2D _collider;
+    private Collider2D[] _colliders;
 
-    public Collider2D Collider { get => _collider; }
+    public Collider2D[] Colliders { get => _colliders; }
 }
