@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{9a7f1d76-c96d-40b6-87ad-79bb304e3b77}">
+		<property name="assetPath">
+			<value>nebezpeci_stoupani_4.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>14.311700680272109</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f87738e5-fbcd-45ac-98fe-25fdf14c2ce7}</destination>
+		</relationship>
+	</object>
+</objects>

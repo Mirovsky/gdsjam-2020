@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{1379d55b-440b-4b59-aaaf-4ffd7fb071ba}">
+		<property name="assetPath">
+			<value>ruch_boom_2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>10</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f87738e5-fbcd-45ac-98fe-25fdf14c2ce7}</destination>
+		</relationship>
+	</object>
+</objects>
