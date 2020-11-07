@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{c742d1a4-7b5c-4557-ae8d-ea43922e491a}">
+		<property name="assetPath">
+			<value>ruch_loop_1.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>55.805691609977323</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f87738e5-fbcd-45ac-98fe-25fdf14c2ce7}</destination>
+		</relationship>
+	</object>
+</objects>
