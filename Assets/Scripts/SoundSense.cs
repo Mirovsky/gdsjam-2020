@@ -7,18 +7,18 @@ using UnityEngine.Tilemaps;
 public class SoundSense : MonoBehaviour
 {
     public TilemapCollider2D SoundMapColider;
+    public SoundSenseSettings Settings;
 
-    [Range(0.0f, 10.0f)]
-    public float Sensitivity = 5;
-    
-    [Range(0.0f, 1.0f)]
-    public float SensitivityGradientRange = 0.5f;
-
-    public AnimationCurve SensitivityGradientFunction;
+    private float Sensitivity = 5;
+    private float SensitivityGradientRange = 0.5f;
+    private AnimationCurve SensitivityGradientFunction;
 
 
     void Start()
     {
+        this.Sensitivity = this.Settings.Sensitivity;
+        this.SensitivityGradientRange = this.Settings.SensitivityGradientRange;
+        this.SensitivityGradientFunction = this.Settings.SensitivityGradientFunction;
     }
 
 
