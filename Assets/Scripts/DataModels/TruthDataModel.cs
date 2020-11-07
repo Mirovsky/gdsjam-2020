@@ -27,4 +27,9 @@ public class TruthDataModel : MonoBehaviour
     {
         return _truthData.defaultTruthAmount;
     }
+
+    public float GetNormalizedCurrentTruth()
+    {
+        return _truthAmount / _truthData.defaultTruthAmount;
+    }
 }
