@@ -43,9 +43,12 @@ public class GameManager : MonoBehaviour
     
     public void FinishGame()
     {
-        _fadeInOutManager.FadeOut(() =>
+        // TODO: Not Implemented!
+        throw new NotImplementedException();
+        
+        /* _fadeInOutManager.FadeOut(() =>
         {
             levelFinishedEvent?.Invoke();
-        });
+        }); */
     }
 }
