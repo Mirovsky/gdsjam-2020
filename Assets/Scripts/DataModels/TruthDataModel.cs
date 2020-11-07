@@ -3,9 +3,10 @@ using Zenject;
 
 public class TruthDataModel : MonoBehaviour
 {
-    [SerializeField] private float _truthAmount = default;
+    [SerializeField] private TruthDataSO _truthData = default;
     
-    [Inject] TruthDataSO _truthData = default;
+    [Space]
+    [SerializeField] private float _truthAmount = default;
 
     void Start()
     {
@@ -20,5 +21,10 @@ public class TruthDataModel : MonoBehaviour
     public float GetCurrentTruth()
     {
         return _truthAmount;
+    }
+
+    public float GetMaxTruth()
+    {
+        return _truthData.defaultTruthAmount;
     }
 }
