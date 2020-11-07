@@ -18,7 +18,7 @@ public class TruthAgentColorByTruthController : MonoBehaviour
     
     protected void Start()
     {
-        _truthAgent.truthSetEvent += HandleTruthAgentTruthSet;
+        _truthAgent.truthUpdatedEvent += HandleTruthAgentTruthUpdated;
 
         _spriteRenderer.color = _defaultColor;
     }
@@ -27,11 +27,11 @@ public class TruthAgentColorByTruthController : MonoBehaviour
     {
         if (_truthAgent != null)
         {
-            _truthAgent.truthSetEvent -= HandleTruthAgentTruthSet;
+            _truthAgent.truthUpdatedEvent -= HandleTruthAgentTruthUpdated;
         }
     }
 
-    private void HandleTruthAgentTruthSet(float currentTruth)
+    private void HandleTruthAgentTruthUpdated(float currentTruth)
     {
         _spriteRenderer.color = Color.Lerp(_noTruthColor, _maxTruthColor, currentTruth / _truthDataModel.GetMaxTruth());
     }

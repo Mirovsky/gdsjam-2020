@@ -76,5 +76,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459e1ec01b4751d45bd7040f9a2ddd56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _truthData: {fileID: 11400000, guid: 5670de9ec9f230743be78414c5ea78e4, type: 2}
   _truthDataModelPrefab: {fileID: 8725582921115905282, guid: f941fa0658b45ba4b9c21e5df803e7d1, type: 3}
+  _soundTruthManager: {fileID: 1227787154364898494, guid: 690308f5bf1bd8b4e800a88f9e348a60, type: 3}
