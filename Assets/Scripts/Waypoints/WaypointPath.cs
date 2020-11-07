@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -8,7 +9,7 @@ public class WaypointPath : MonoBehaviour
     [SerializeField] private Transform[] _waypoints = default;
     [SerializeField] private bool _loop = default;
 
-    public Transform[] waypoint => _waypoints;
+    public Transform[] waypoints => _waypoints;
     
 #if UNITY_EDITOR
     protected void OnDrawGizmos()

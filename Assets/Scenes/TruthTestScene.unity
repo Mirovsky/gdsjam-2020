@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waypointPath: {fileID: 1723345569}
-  _moveAlongPathBehaviour: 0
+  _moveAlongPathBehaviour: 1
   _speed: 10
 --- !u!23 &1417399280
 MeshRenderer:

@@ -24,9 +24,15 @@ public class MoveAlongPath : MonoBehaviour
         transform.position = GetPointOnPath();
     }
 
+    private Vector3 GetPointOnPath()
+    {
+        return Vector3.MoveTowards(transform.position, _waypointPath.waypoints[_currentWaypointId].position,
+            _speed * Time.deltaTime);
+    }
+
     private void UpdateWaypointId()
     {
-        var distance = Vector3.Distance(transform.position, _waypointPath.waypoint[_currentWaypointId].position);
+        var distance = Vector3.Distance(transform.position, _waypointPath.waypoints[_currentWaypointId].position);
 
         // Close to target point
         if (!Mathf.Approximately(distance, 0.0f)) return;
@@ -39,7 +45,7 @@ public class MoveAlongPath : MonoBehaviour
         }
         
         // Last waypoint
-        if (_currentWaypointId == _waypointPath.waypoint.Length - 1)
+        if (_currentWaypointId == _waypointPath.waypoints.Length - 1)
         {
             switch (_moveAlongPathBehaviour)
             {
@@ -59,11 +65,5 @@ public class MoveAlongPath : MonoBehaviour
         {
             _currentWaypointId += _direction;
         }
-    }
-
-    private Vector3 GetPointOnPath()
-    {
-        return Vector3.MoveTowards(transform.position, _waypointPath.waypoint[_currentWaypointId].position,
-            _speed * Time.deltaTime);
     }
 }
