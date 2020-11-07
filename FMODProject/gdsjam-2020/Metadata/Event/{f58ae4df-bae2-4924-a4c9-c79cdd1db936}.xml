@@ -133,7 +133,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{32a35ec8-0c67-4417-8f16-1542525de154}">
 		<property name="name">
-			<value>Audio 1</value>
+			<value>podkres spina</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{a304c23e-04d5-4f92-abb5-425d973bad46}</destination>
