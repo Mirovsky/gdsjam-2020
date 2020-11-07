@@ -7,18 +7,19 @@ using UnityEngine.Tilemaps;
 public class SoundSense : MonoBehaviour
 {
     public TilemapCollider2D SoundMapColider;
-    public SoundSenseSettings Settings;
 
-    private float Sensitivity = 5;
-    private float SensitivityGradientRange = 0.5f;
-    private AnimationCurve SensitivityGradientFunction;
+    [Header("Sensitivity")]
+    [Range(0.0f, 10.0f)]
+    public float Sensitivity = 5;
+    
+    [Range(0.0f, 1.0f)]
+    public float SensitivityGradientRange = 0.5f;
+
+    public AnimationCurve SensitivityGradientFunction;
 
 
     void Start()
     {
-        this.Sensitivity = this.Settings.Sensitivity;
-        this.SensitivityGradientRange = this.Settings.SensitivityGradientRange;
-        this.SensitivityGradientFunction = this.Settings.SensitivityGradientFunction;
     }
 
 
@@ -31,7 +32,7 @@ public class SoundSense : MonoBehaviour
     }
 
 
-    private Vector3 _getClosestPoint()
+    Vector3 GetClosestPoint()
     {
         var collider = this.SoundMapColider;
         var location = this.transform.position;
@@ -58,7 +59,7 @@ public class SoundSense : MonoBehaviour
     float getSensitivityRatio()
     {
         var location = this.transform.position;
-        var closestPoint = this._getClosestPoint();
+        var closestPoint = this.GetClosestPoint();
 
         var r1 = this._getSensitivityOuterRadius();
         var r2 = this._getSensitivityInnerRadius();
@@ -112,7 +113,7 @@ public class SoundSense : MonoBehaviour
         if (!this.SoundMapColider) return;
 
         var location = this.transform.position;
-        Vector3 closestPoint = this._getClosestPoint();
+        Vector3 closestPoint = this.GetClosestPoint();
 
         float maxSize = 0.5f;
         float minSize = 0.1f;
