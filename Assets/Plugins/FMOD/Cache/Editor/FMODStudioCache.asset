@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODProject/gdsjam-2020/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637403518540000000
+  lastModified: 637403551441934101
   LoadResult: 0
-  FileSizes: []
+  FileSizes:
+  - Name: Desktop
+    Value: 744
   Exists: 1
 --- !u!114 &-1173319164325957874
 MonoBehaviour:
@@ -32,7 +34,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODProject/gdsjam-2020/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637403518540000000
+  lastModified: 637403551441884401
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -58,7 +60,7 @@ MonoBehaviour:
   - {fileID: -1173319164325957874}
   StringsBanks:
   - {fileID: -2275542198160704664}
-  stringsBankWriteTime: 637403518540000000
+  stringsBankWriteTime: 637403551441934101
   cacheVersion: 5
 --- !u!114 &1517608369307199708
 MonoBehaviour:
@@ -118,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODProject/gdsjam-2020/Build/Desktop/UI.bank
   Name: UI
-  lastModified: 637403518540000000
+  lastModified: 637403523380142272
   LoadResult: 0
   FileSizes: []
   Exists: 1
