@@ -7,18 +7,18 @@ using UnityEngine.Tilemaps;
 public class SoundSense : MonoBehaviour
 {
     public TilemapCollider2D SoundMapColider;
+    public SoundSenseSettings Settings;
 
-    [Range(0.0f, 10.0f)]
-    public float Sensitivity = 5;
-    
-    [Range(0.0f, 1.0f)]
-    public float SensitivityGradientRange = 0.5f;
-
-    // public AnimationCurve SensitivityGradientFunction;
+    private float Sensitivity = 5;
+    private float SensitivityGradientRange = 0.5f;
+    private AnimationCurve SensitivityGradientFunction;
 
 
     void Start()
     {
+        this.Sensitivity = this.Settings.Sensitivity;
+        this.SensitivityGradientRange = this.Settings.SensitivityGradientRange;
+        this.SensitivityGradientFunction = this.Settings.SensitivityGradientFunction;
     }
 
 
@@ -71,8 +71,8 @@ public class SoundSense : MonoBehaviour
         else if (dist < r1) linearRatio = 1 - Mathf.Abs(dist - r2) / (r1 - r2);
         else linearRatio = 0;
 
-        // var ratio = this.SensitivityGradientFunction.evaluate(linearRatio);
-        var ratio = linearRatio;
+        var ratio = this.SensitivityGradientFunction.Evaluate(linearRatio);
+        // var ratio = linearRatio;
 
         return ratio;
     }
@@ -93,11 +93,17 @@ public class SoundSense : MonoBehaviour
         var r1 = this._getSensitivityOuterRadius();
         var r2 = this._getSensitivityInnerRadius();
 
-        Gizmos.color = Color.yellow;
+        var diff = r1 - r2;
+
+        Gizmos.color = diff > 0 ? Color.yellow : Color.red;
         Gizmos.DrawWireSphere(location, r1);
 
-        if (r1 == r2) Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(location, r2);
+        if (r1 != r2)
+        {
+            var fce = this.SensitivityGradientFunction;
+            Gizmos.DrawWireSphere(location, r2 + diff * fce.Evaluate(0.5f));
+            Gizmos.DrawWireSphere(location, r2);    
+        }
     }
 
     
@@ -108,11 +114,11 @@ public class SoundSense : MonoBehaviour
         var location = this.transform.position;
         Vector3 closestPoint = this._getClosestPoint();
 
-        float maxSize = 0.25f;
-        float minSize = 0.025f;
+        float maxSize = 0.5f;
+        float minSize = 0.1f;
 
         float ratio = this.getSensitivityRatio();
-        float radius = Mathf.Max(minSize, maxSize * ratio);
+        float radius = minSize + (maxSize - minSize) * ratio;
 
         if (ratio > 0) Gizmos.color = Color.yellow;
         else Gizmos.color = Color.red;
