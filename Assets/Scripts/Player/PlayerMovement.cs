@@ -3,14 +3,15 @@
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private PlayerInput _playerInput = default;
-
+    [SerializeField] private Rigidbody2D _rigidbody2D = default;
+    
     [Space]
     [SerializeField] private float _playerSpeed;
     
-    void Update()
+    void FixedUpdate()
     {
         var moveDelta = _playerInput.movementInput * (_playerSpeed * Time.deltaTime);
 
-        transform.position = transform.position + new Vector3(moveDelta.x, moveDelta.y, 0.0f);
+        _rigidbody2D.MovePosition(_rigidbody2D.position + moveDelta);
     }
 }

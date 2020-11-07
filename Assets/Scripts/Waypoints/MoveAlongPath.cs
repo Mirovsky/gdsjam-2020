@@ -5,6 +5,9 @@ public class MoveAlongPath : MonoBehaviour
     [SerializeField] private WaypointPath _waypointPath = default;
 
     [Space]
+    [SerializeField] private Rigidbody2D _rigidbody2D = default;
+    
+    [Space]
     [SerializeField] private MoveAlongPathBehaviour _moveAlongPathBehaviour = default;
     [SerializeField] private float _speed = default;
 
@@ -21,7 +24,8 @@ public class MoveAlongPath : MonoBehaviour
     protected void Update()
     {
         UpdateWaypointId();
-        transform.position = GetPointOnPath();
+
+        _rigidbody2D.MovePosition(GetPointOnPath());
     }
 
     private Vector3 GetPointOnPath()
