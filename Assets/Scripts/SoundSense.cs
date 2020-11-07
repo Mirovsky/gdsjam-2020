@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class SoundSence : MonoBehaviour
+
+public class SoundSense : MonoBehaviour
 {
     public TilemapCollider2D SoundMapColider;
 
     [Range(0.0f, 10.0f)]
-    public float Sensitivity;
+    public float Sensitivity = 5;
     
-    [Range(0.0f, 100.0f)]
-    public float SensitivityGradientRange;
+    [Range(0.0f, 1.0f)]
+    public float SensitivityGradientRange = 0.5f;
+
+    // public AnimationCurve SensitivityGradientFunction;
 
 
     void Start()
@@ -48,7 +51,7 @@ public class SoundSence : MonoBehaviour
     private float _getSensitivityInnerRadius()
     {
         var r = this._getSensitivityOuterRadius();
-        return r - r * (this.SensitivityGradientRange / 100.0f);
+        return r - r * this.SensitivityGradientRange;
     }
 
 
@@ -68,15 +71,20 @@ public class SoundSence : MonoBehaviour
         else if (dist < r1) linearRatio = 1 - Mathf.Abs(dist - r2) / (r1 - r2);
         else linearRatio = 0;
 
-        return linearRatio;
+        // var ratio = this.SensitivityGradientFunction.evaluate(linearRatio);
+        var ratio = linearRatio;
+
+        return ratio;
     }
 
 
+    #if UNITY_EDITOR
     void OnDrawGizmos()
     {
         this._drawSensitivityGizmo();
         this._drawClosestPointGizmo();
     }
+    #endif
 
 
     private void _drawSensitivityGizmo()
