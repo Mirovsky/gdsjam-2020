@@ -52,7 +52,7 @@ public class SoundSence : MonoBehaviour
     }
 
 
-    private float _getSensitivityRatio()
+    float getSensitivityRatio()
     {
         var location = this.transform.position;
         var closestPoint = this._getClosestPoint();
@@ -103,7 +103,7 @@ public class SoundSence : MonoBehaviour
         float maxSize = 0.25f;
         float minSize = 0.025f;
 
-        float ratio = this._getSensitivityRatio();
+        float ratio = this.getSensitivityRatio();
         float radius = Mathf.Max(minSize, maxSize * ratio);
 
         if (ratio > 0) Gizmos.color = Color.yellow;
