@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
-using Zenject;
 
 public class TruthDataModel : MonoBehaviour
 {
     [SerializeField] private TruthDataSO _truthData = default;
     
     [Space]
-    [SerializeField] private float _truthAmount = default;
+    [SerializeField, Range(0, 100)] private float _truthAmount = default;
 
     void Start()
     {

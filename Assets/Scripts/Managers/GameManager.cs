@@ -44,6 +44,9 @@ public class GameManager : MonoBehaviour
     public void FinishGame()
     {
         // TODO: Not Implemented!
+
+        Debug.Log(CalculateFinishScore());
+        
         throw new NotImplementedException();
         
         /* _fadeInOutManager.FadeOut(() =>

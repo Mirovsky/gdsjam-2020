@@ -11,9 +11,9 @@ public class DefaultInstaller : MonoInstaller
     
     public override void InstallBindings()
     {
-        Container.Bind<TruthDataModel>().FromComponentInNewPrefab(_truthDataModelPrefab).AsSingle();
-        Container.Bind<SoundTruthManager>().FromComponentInNewPrefab(_soundTruthManagerPrefab).AsSingle();
-        Container.Bind<FadeInOutManager>().FromComponentInNewPrefab(_fadeInOutManagerPrefab).AsSingle();
-        Container.Bind<GameManager>().FromComponentInNewPrefab(_gameManagerPrefab).AsSingle();
+        Container.Bind<TruthDataModel>().FromComponentInNewPrefab(_truthDataModelPrefab).AsSingle().NonLazy();
+        Container.Bind<SoundTruthManager>().FromComponentInNewPrefab(_soundTruthManagerPrefab).AsSingle().NonLazy();
+        Container.Bind<FadeInOutManager>().FromComponentInNewPrefab(_fadeInOutManagerPrefab).AsSingle().NonLazy();
+        Container.Bind<GameManager>().FromComponentInNewPrefab(_gameManagerPrefab).AsSingle().NonLazy();
     }
 }
