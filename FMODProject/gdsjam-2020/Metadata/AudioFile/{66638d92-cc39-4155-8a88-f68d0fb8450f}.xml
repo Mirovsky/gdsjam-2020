@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{66638d92-cc39-4155-8a88-f68d0fb8450f}">
+		<property name="assetPath">
+			<value>spina_ruch_edit_5.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>31.25</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f87738e5-fbcd-45ac-98fe-25fdf14c2ce7}</destination>
+		</relationship>
+	</object>
+</objects>
