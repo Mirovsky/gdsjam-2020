@@ -1,19 +1,18 @@
 ﻿using UnityEngine;
+using Zenject;
 
 public class TruthAgent : MonoBehaviour
 {
-    [SerializeField] private bool _hasTruth = default;
     [SerializeField] private float _truthAmount = default;
 
-    public event System.Action<float> truthSetEvent;
+    [Inject] private TruthDataModel _truthDataModel = default;
     
-    public bool hasTruth => _hasTruth;
+    public event System.Action<float> truthUpdatedEvent;
     
-    public void SetTruth(float truthAmount)
+    public void UpdateTruthBy(float amount)
     {
-        _hasTruth = true;
-        _truthAmount = truthAmount;
+        _truthAmount = Mathf.Clamp(_truthAmount + amount, 0.0f, _truthDataModel.GetMaxTruth());
         
-        truthSetEvent?.Invoke(_truthAmount);
+        truthUpdatedEvent?.Invoke(_truthAmount);
     }
 }
