@@ -22,13 +22,13 @@ TextureImporter:
     second: uiButton_playActive
   - first:
       213: 7153852151469781627
-    second: ui Texture_6
+    second: uiButton_restart
   - first:
       213: -1549719242473778074
-    second: ui Texture_7
+    second: uiButton_restartHover
   - first:
       213: -1192939672989329425
-    second: ui Texture_8
+    second: uiButton_restartActive
   - first:
       213: -3925971983241247646
     second: ui Texture_9
@@ -74,6 +74,60 @@ TextureImporter:
   - first:
       213: 2528908309059530739
     second: ui Texture_23
+  - first:
+      213: -427791200511569841
+    second: uiButton_pause
+  - first:
+      213: 3412147897110992789
+    second: uiButton_pauseHover
+  - first:
+      213: 3146205177887278702
+    second: uiButton_pauseActive
+  - first:
+      213: -8566388123787915002
+    second: uiButton_play
+  - first:
+      213: 7795412259049977815
+    second: uiButton_playHover
+  - first:
+      213: 2730813083258970525
+    second: uiButton_playActive
+  - first:
+      213: 5476976027591065063
+    second: ui Texture_24
+  - first:
+      213: 2263363590029650142
+    second: ui Texture_25
+  - first:
+      213: 8123633375924042393
+    second: ui Texture_26
+  - first:
+      213: -4076643973391089718
+    second: ui Texture_27
+  - first:
+      213: -5109499091653234778
+    second: ui Texture_28
+  - first:
+      213: 2256965474323778763
+    second: ui Texture_29
+  - first:
+      213: 7172441813491604838
+    second: ui Texture_30
+  - first:
+      213: 1966714621263220653
+    second: ui Texture_31
+  - first:
+      213: 250448123083514965
+    second: ui Texture_32
+  - first:
+      213: 2591370272673842415
+    second: ui Texture_33
+  - first:
+      213: 3140335914829519782
+    second: ui Texture_34
+  - first:
+      213: -7356972606392461005
+    second: ui Texture_35
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -201,6 +255,69 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f40587f6b2e201af0800000000000000
+      internalID: -427791200511569841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uiButton_pauseHover
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59795602f626a5f20800000000000000
+      internalID: 3412147897110992789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uiButton_pauseActive
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e664772a0f099ab20800000000000000
+      internalID: 3146205177887278702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uiButton_play
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 128
         width: 128
         height: 128
@@ -211,14 +328,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6010f7130041c6ba0800000000000000
-      internalID: -6094474204676161274
+      spriteID: 6011f7953631e1980800000000000000
+      internalID: -8566388123787915002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uiButton_pauseHover
+      name: uiButton_playHover
       rect:
         serializedVersion: 2
         x: 128
@@ -232,14 +349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd14b3cf750947240800000000000000
-      internalID: 4788611011369976285
+      spriteID: 7d73662d52ede2c60800000000000000
+      internalID: 7795412259049977815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uiButton_pauseActive
+      name: uiButton_playActive
       rect:
         serializedVersion: 2
         x: 256
@@ -253,14 +370,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e37d8eeb039274030800000000000000
-      internalID: 3478794526505097022
+      spriteID: d91e3afd70cc5e520800000000000000
+      internalID: 2730813083258970525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uiButton_play
+      name: uiButton_restart
       rect:
         serializedVersion: 2
         x: 0
@@ -274,14 +391,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa78a43f100fc8480800000000000000
-      internalID: -8895471272796190801
+      spriteID: b72350801a6974360800000000000000
+      internalID: 7153852151469781627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uiButton_playHover
+      name: uiButton_restartHover
       rect:
         serializedVersion: 2
         x: 128
@@ -295,14 +412,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59061239c8f62b5d0800000000000000
-      internalID: -3048251348221861739
+      spriteID: 66453ca4f8a4e7ae0800000000000000
+      internalID: -1549719242473778074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: uiButton_playActive
+      name: uiButton_restartActive
       rect:
         serializedVersion: 2
         x: 256
@@ -316,8 +433,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f009c9b6050c4aef0800000000000000
-      internalID: -97741840259969009
+      spriteID: fe7100910b3d17fe0800000000000000
+      internalID: -1192939672989329425
       vertices: []
       indices: 
       edges: []
