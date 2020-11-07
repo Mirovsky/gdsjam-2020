@@ -1,5 +1,74 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8569236002090702554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/button_click
+  m_EditorClassIdentifier: 
+  Path: event:/ui/button_click
+  guid: 5e6377e50c173347b11bcea7c1fc971b
+  Banks:
+  - {fileID: 5739847741457705247}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7139498049477259838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/game/nebezpeci
+  m_EditorClassIdentifier: 
+  Path: event:/game/nebezpeci
+  guid: c2d1e16d4da7104e94415ebb261061d2
+  Banks:
+  - {fileID: -1173319164325957874}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 19494
+--- !u!114 &-6316463315178817779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/game/click_menu
+  m_EditorClassIdentifier: 
+  Path: event:/game/click_menu
+  guid: e3f2f5efb1b15046a4faacebae49c809
+  Banks:
+  - {fileID: -1173319164325957874}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-2275542198160704664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,11 +83,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODProject/gdsjam-2020/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637403551441934101
+  lastModified: 637403866562594729
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 744
+    Value: 1226
   Exists: 1
 --- !u!114 &-1173319164325957874
 MonoBehaviour:
@@ -34,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODProject/gdsjam-2020/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637403551441884401
+  lastModified: 637403866562534735
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -54,14 +123,70 @@ MonoBehaviour:
   - {fileID: -2275542198160704664}
   - {fileID: -1173319164325957874}
   - {fileID: 5739847741457705247}
-  EditorEvents: []
-  EditorParameters: []
+  EditorEvents:
+  - {fileID: 368382331126053278}
+  - {fileID: -7139498049477259838}
+  - {fileID: 4918148013218022198}
+  - {fileID: 972874730759416572}
+  - {fileID: -6316463315178817779}
+  - {fileID: 6035138467668438198}
+  - {fileID: 8801189777052902890}
+  - {fileID: -8569236002090702554}
+  - {fileID: 9129582634093290068}
+  EditorParameters:
+  - {fileID: 9143435547541876720}
   MasterBanks:
   - {fileID: -1173319164325957874}
   StringsBanks:
   - {fileID: -2275542198160704664}
-  stringsBankWriteTime: 637403551441934101
+  stringsBankWriteTime: 637403866562594729
   cacheVersion: 5
+--- !u!114 &368382331126053278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/game/Ruchy
+  m_EditorClassIdentifier: 
+  Path: event:/game/Ruchy
+  guid: 54f7fb9ae0553345ba5c565b8ec29724
+  Banks:
+  - {fileID: -1173319164325957874}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &972874730759416572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/game/spina
+  m_EditorClassIdentifier: 
+  Path: event:/game/spina
+  guid: e2a1dadccce9f543b4d49e1702f9d384
+  Banks:
+  - {fileID: -1173319164325957874}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 31250
 --- !u!114 &1517608369307199708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +231,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &4918148013218022198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/game/podkres_sub
+  m_EditorClassIdentifier: 
+  Path: event:/game/podkres_sub
+  guid: dfe48af5e2ba2449a4c9c79cdd1db936
+  Banks:
+  - {fileID: -1173319164325957874}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 125000
 --- !u!114 &5739847741457705247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODProject/gdsjam-2020/Build/Desktop/UI.bank
   Name: UI
-  lastModified: 637403523380142272
+  lastModified: 637403866563114724
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -144,3 +292,92 @@ MonoBehaviour:
     data1: 441992383
     data2: 335826726
   Exists: 0
+--- !u!114 &6035138467668438198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/game/podkres_melodie
+  m_EditorClassIdentifier: 
+  Path: event:/game/podkres_melodie
+  guid: f1d858578bbd5c4c8a972dd0b2b353a7
+  Banks:
+  - {fileID: -1173319164325957874}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 177149
+--- !u!114 &8801189777052902890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/ambience
+  m_EditorClassIdentifier: 
+  Path: event:/ambience/ambience
+  guid: f27c67685bec424da4262774043f32a0
+  Banks:
+  - {fileID: -1173319164325957874}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 125000
+--- !u!114 &9129582634093290068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/start_click
+  m_EditorClassIdentifier: 
+  Path: event:/ui/start_click
+  guid: bd7275d29a4c0344a3598dcc3c26a575
+  Banks:
+  - {fileID: 5739847741457705247}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &9143435547541876720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/truthAmount
+  m_EditorClassIdentifier: 
+  Name: truthAmount
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3845411710
+    data2: 808002245
+  Exists: 1

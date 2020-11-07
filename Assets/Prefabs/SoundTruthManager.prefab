@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _truthAmountParameterRef: truthAmount
   _ambienceEventRef: event:/ambience/ambience
+  _dirtEventRef: event:/game/spina

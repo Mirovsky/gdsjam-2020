@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Zenject;
 
 
 public class SoundSense : MonoBehaviour
@@ -17,20 +18,12 @@ public class SoundSense : MonoBehaviour
 
     public AnimationCurve SensitivityGradientFunction;
 
-
-    void Start()
-    {
-    }
-
-
+    [Inject] private TruthDataModel _truthDataModel = default;
+    
     void Update()
     {
+        _truthDataModel.ReduceTruthBy(getSensitivityRatio());
     }
-
-
-    void FixedUpdate() {
-    }
-
 
     Vector3 GetClosestPoint()
     {
@@ -41,21 +34,18 @@ public class SoundSense : MonoBehaviour
 
         return closestPoint;
     }
-
-
+    
     private float _getSensitivityOuterRadius()
     {
         return Mathf.Max(0, this.Sensitivity);
     }
-   
 
     private float _getSensitivityInnerRadius()
     {
         var r = this._getSensitivityOuterRadius();
         return r - r * this.SensitivityGradientRange;
     }
-
-
+    
     float getSensitivityRatio()
     {
         var location = this.transform.position;
@@ -78,16 +68,13 @@ public class SoundSense : MonoBehaviour
         return ratio;
     }
 
-
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
     void OnDrawGizmos()
     {
         this._drawSensitivityGizmo();
         this._drawClosestPointGizmo();
     }
-    #endif
-
-
+    
     private void _drawSensitivityGizmo()
     {
         var location = this.transform.position;
@@ -107,7 +94,6 @@ public class SoundSense : MonoBehaviour
         }
     }
 
-    
     private void _drawClosestPointGizmo()
     {
         if (!this.SoundMapColider) return;
@@ -126,4 +112,5 @@ public class SoundSense : MonoBehaviour
 
         Gizmos.DrawWireSphere(closestPoint, radius);
     }
+#endif
 }

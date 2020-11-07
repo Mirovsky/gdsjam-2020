@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DefaultTruthData
   m_EditorClassIdentifier: 
   _defaultTruthAmount: 100
-  _baseTruthReducePerSecond: 0
+  _baseTruthReducePerSecond: 10

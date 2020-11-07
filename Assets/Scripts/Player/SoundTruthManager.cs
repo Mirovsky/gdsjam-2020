@@ -9,11 +9,13 @@ public class SoundTruthManager : MonoBehaviour
 
     [Space]
     [EventRef, SerializeField] private string _ambienceEventRef = default;
+    [EventRef, SerializeField] private string _dirtEventRef = default;
     
     [Inject] private TruthDataModel _truthDataModel = default;
     [Inject] private GameManager _gameManager;
 
-    private FMOD.Studio.EventInstance _eventInstance = default;
+    private FMOD.Studio.EventInstance _ambienceEventInstance = default;
+    private FMOD.Studio.EventInstance _dirtEventInstance = default;
     
     protected void Start()
     {
@@ -31,9 +33,14 @@ public class SoundTruthManager : MonoBehaviour
     private void HandleGameManagerLevelStart()
     {
         var eventDescription = RuntimeManager.GetEventDescription(_ambienceEventRef);
-        eventDescription.createInstance(out _eventInstance);
+        eventDescription.createInstance(out _ambienceEventInstance);
+        
+        _ambienceEventInstance.start();
 
-        _eventInstance.start();
+        eventDescription = RuntimeManager.GetEventDescription(_dirtEventRef);
+        eventDescription.createInstance(out _dirtEventInstance);
+
+        _dirtEventInstance.start();
     }
 
     protected void Update()

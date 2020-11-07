@@ -14,7 +14,9 @@ public class TruthDataModel : MonoBehaviour
     
     public void ReduceTruthBy(float reduceMult)
     {
-        _truthAmount *= _truthData.baseTruthReducePerSecond * reduceMult * Time.deltaTime;
+        _truthAmount -= _truthData.baseTruthReducePerSecond * reduceMult * Time.deltaTime;
+
+        _truthAmount = Mathf.Clamp(_truthAmount, 0.0f, _truthData.defaultTruthAmount);
     }
 
     public float GetCurrentTruth()
