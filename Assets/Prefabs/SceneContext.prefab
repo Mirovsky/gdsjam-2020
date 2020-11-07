@@ -77,4 +77,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _truthDataModelPrefab: {fileID: 8725582921115905282, guid: f941fa0658b45ba4b9c21e5df803e7d1, type: 3}
-  _soundTruthManager: {fileID: 1227787154364898494, guid: 690308f5bf1bd8b4e800a88f9e348a60, type: 3}
+  _soundTruthManagerPrefab: {fileID: 1227787154364898494, guid: 690308f5bf1bd8b4e800a88f9e348a60, type: 3}
+  _levelArea: {fileID: 0}
