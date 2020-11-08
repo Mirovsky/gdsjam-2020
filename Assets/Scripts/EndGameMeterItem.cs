@@ -11,23 +11,27 @@ public class EndGameMeterItem : MonoBehaviour
     [Range(0.0f, 1.0f)]
     public float Score = 0;
 
-    private float progress = 0.0f;
+    private float AnimationProgress = 0.0f;
+    public float AnimationDelay = 0.0f;
+    private float AnimationStep = 0.005f;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        AnimationProgress = -AnimationDelay;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (progress < 1)
+        if (AnimationProgress < 1)
         {
-            progress += 0.01f;
+            AnimationProgress += AnimationStep;
         }
 
-        var v = ProgressAnimationFunction.Evaluate(progress) * Score;
+        var p = Mathf.Max(0, AnimationProgress);
+        var v = ProgressAnimationFunction.Evaluate(p) * Score;
         ProgressObject.transform.localScale = new Vector2(1, v);
     }
 }

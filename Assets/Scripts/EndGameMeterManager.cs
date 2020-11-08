@@ -55,6 +55,7 @@ public class EndGameMeterManager : MonoBehaviour
 
             var meter = item.GetComponent<EndGameMeterItem>();
             meter.Score = s;
+            meter.AnimationDelay = i * 0.08f;
         }
 
     }
