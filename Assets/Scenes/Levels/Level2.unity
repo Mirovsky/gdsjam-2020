@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 76294205}
   - component: {fileID: 76294204}
   - component: {fileID: 76294206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1327,7 +1327,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 31
-      m_TileSpriteIndex: 26
+      m_TileSpriteIndex: 27
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3684,10 +3684,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 277
     m_Data: {fileID: -9133206537168422086, guid: b032e9c943e524cc7864cedc017fbf25, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 6456168735150421801, guid: b032e9c943e524cc7864cedc017fbf25, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 6456168735150421801, guid: b032e9c943e524cc7864cedc017fbf25, type: 3}
   - m_RefCount: 11
     m_Data: {fileID: -7385525344050640282, guid: b032e9c943e524cc7864cedc017fbf25, type: 3}
   - m_RefCount: 1
@@ -3818,7 +3818,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3989,6 +3989,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4086393d5de3bdb4b9b4d5276a8e6416, type: 3}
+--- !u!1001 &423645334
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481739, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_Name
+      value: Global Light 2D
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
 --- !u!1 &1026436819
 GameObject:
   m_ObjectHideFlags: 0
@@ -3999,7 +4056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1026436820}
   - component: {fileID: 1026436821}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4193,7 +4250,7 @@ GameObject:
   - component: {fileID: 1812948887}
   - component: {fileID: 1812948888}
   - component: {fileID: 1812948889}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LevelArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: GameScenes
   m_EditorClassIdentifier: 
   _gameScenes:
-  - Assets/Scenes/Levels/Level1.unity
+  - Assets/Scenes/Levels/Level2.unity
+  - Assets/Scenes/Levels/Level3.unity
+  - Assets/Scenes/Levels/Level5.unity
+  - Assets/Scenes/Levels/Level7.unity
+  - Assets/Scenes/Levels/Level8.unity

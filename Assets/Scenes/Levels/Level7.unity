@@ -174,6 +174,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2127710167293245176, guid: 8bd352716a4c2fe47816fa46ac84150c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2127710167293245177, guid: 8bd352716a4c2fe47816fa46ac84150c, type: 3}
       propertyPath: m_Name
       value: TruthAgent
@@ -192,7 +196,7 @@ GameObject:
   - component: {fileID: 76294205}
   - component: {fileID: 76294204}
   - component: {fileID: 76294206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3734,7 +3738,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3755,7 +3759,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -4482,7 +4486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1026436820}
   - component: {fileID: 1026436821}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4710,6 +4714,63 @@ Transform:
   m_Father: {fileID: 1193896320}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1155661775
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481737, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140001804010481739, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
+      propertyPath: m_Name
+      value: Global Light 2D
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6ad3834dc82407342a2a1a8f3f83db01, type: 3}
 --- !u!1 &1166617434
 GameObject:
   m_ObjectHideFlags: 0
@@ -5189,7 +5250,7 @@ GameObject:
   - component: {fileID: 1812948887}
   - component: {fileID: 1812948888}
   - component: {fileID: 1812948889}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LevelArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
