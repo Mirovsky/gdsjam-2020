@@ -44,6 +44,7 @@
 		<relationship name="automationTracks">
 			<destination>{3021f568-3e46-4d43-84e3-c919df2db94e}</destination>
 			<destination>{4b9048b8-69f7-4236-8c7b-0b3ab61f04ff}</destination>
+			<destination>{c311d88c-f22b-4117-b2d1-47a2df649035}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{f0bf225b-5c3b-4b78-b57f-99270dca0a07}</destination>
@@ -100,6 +101,11 @@
 	<object class="AutomationTrack" id="{4b9048b8-69f7-4236-8c7b-0b3ab61f04ff}">
 		<relationship name="automator">
 			<destination>{1fe235aa-d067-4bfb-89cf-7c34b112a875}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationTrack" id="{c311d88c-f22b-4117-b2d1-47a2df649035}">
+		<relationship name="automator">
+			<destination>{8fd31d79-29d5-40b0-b919-c9c6b22fdac4}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{7b6e101e-d48b-44d0-b5e2-40a289780dad}">
@@ -186,6 +192,7 @@
 		</property>
 		<relationship name="automators">
 			<destination>{6cc5ab0d-0089-44cd-a337-e4f516b63a74}</destination>
+			<destination>{8fd31d79-29d5-40b0-b919-c9c6b22fdac4}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{97458f2d-7c14-449d-97d5-a7c5feab0b05}" />
@@ -224,6 +231,11 @@
 			<destination>{294eb9f3-7ead-4c62-9ae7-a736b2e80b0e}</destination>
 		</relationship>
 	</object>
+	<object class="Automator" id="{8fd31d79-29d5-40b0-b919-c9c6b22fdac4}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>overlap</value>
+		</property>
+	</object>
 	<object class="AutomationCurve" id="{294eb9f3-7ead-4c62-9ae7-a736b2e80b0e}">
 		<relationship name="parameter">
 			<destination>{c13d2b67-53a6-4056-ad63-4afd7c0a3c36}</destination>
@@ -238,7 +250,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0.5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{4b867b0a-b419-43a3-8e0d-fd2e63176af9}">
@@ -246,7 +258,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>2</value>
+			<value>1.5</value>
 		</property>
 	</object>
 </objects>
