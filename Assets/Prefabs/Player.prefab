@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 153268041336442373}
   - component: {fileID: 153268041336442393}
   - component: {fileID: 153268041336442372}
+  - component: {fileID: 5344656511730669341}
+  - component: {fileID: 1351646612735775190}
+  - component: {fileID: 1473361788842755465}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -97,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerInput: {fileID: 153268041336442373}
   _rigidbody2D: {fileID: 153268041336442392}
-  _playerSpeed: 5
+  _playerSpeed: 1.5
 --- !u!114 &153268041336442372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +115,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _collider2DEvents: {fileID: 153268041432042072}
   _transferSpeedPerSecond: 25
+--- !u!114 &5344656511730669341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153268041336442375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ded59bd6a6e9e749966b0466332c4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 3859505177978279697}
+  _playerInput: {fileID: 153268041336442373}
+--- !u!114 &1351646612735775190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153268041336442375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee93e6b54a363e4eb05f46bf7830f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelFinishTag: LevelFinish
+--- !u!114 &1473361788842755465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153268041336442375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a3f7b0adf36d44dd850d8920edb86f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundMapColider: {fileID: 0}
+  Sensitivity: 1.15
+  SensitivityGradientRange: 1
+  SensitivityGradientFunction:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &153268041432042053
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,6 +254,7 @@ GameObject:
   - component: {fileID: 7718716136542369517}
   - component: {fileID: 964183463281857478}
   - component: {fileID: 3859505177978279697}
+  - component: {fileID: 7484390014313563767}
   m_Layer: 0
   m_Name: PlayerGraphics
   m_TagString: Untagged
@@ -276,3 +346,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7484390014313563767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232740773378517568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f378c92a94751459b1756b93821c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stepEventRef: event:/game/steps

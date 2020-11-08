@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8959438208517842159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/game/spina 3
+  m_EditorClassIdentifier: 
+  Path: event:/game/spina 3
+  guid: c8cf740a68def549bb465d153364de6a
+  Banks:
+  - {fileID: -1173319164325957874}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8101958336794616319}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 31250
 --- !u!114 &-8569236002090702554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23,6 +47,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-8101958336794616319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/spina 3/Fires
+  m_EditorClassIdentifier: 
+  Name: Fires
+  Min: 0
+  Max: 1
+  Default: 0.5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-7139498049477259838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +113,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-3670005558829944736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/game/interakce
+  m_EditorClassIdentifier: 
+  Path: event:/game/interakce
+  guid: 7f6de84c984bec48bcb58c003929e87e
+  Banks:
+  - {fileID: -1173319164325957874}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-3359192759270692791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/game/kroky
+  m_EditorClassIdentifier: 
+  Path: event:/game/kroky
+  guid: 2ad51e285701a742ba43da9c540a5a7b
+  Banks:
+  - {fileID: -1173319164325957874}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 13500
 --- !u!114 &-2275542198160704664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,9 +173,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODProject/gdsjam-2020/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637403902490000000
+  lastModified: 637404232383351580
   LoadResult: 0
-  FileSizes: []
+  FileSizes:
+  - Name: Desktop
+    Value: 1442
   Exists: 1
 --- !u!114 &-1173319164325957874
 MonoBehaviour:
@@ -101,7 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODProject/gdsjam-2020/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637403902490000000
+  lastModified: 637404232383281573
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -131,13 +223,17 @@ MonoBehaviour:
   - {fileID: 8801189777052902890}
   - {fileID: -8569236002090702554}
   - {fileID: 9129582634093290068}
+  - {fileID: -3359192759270692791}
+  - {fileID: 8940246743334805172}
+  - {fileID: -3670005558829944736}
+  - {fileID: -8959438208517842159}
   EditorParameters:
   - {fileID: 9143435547541876720}
   MasterBanks:
   - {fileID: -1173319164325957874}
   StringsBanks:
   - {fileID: -2275542198160704664}
-  stringsBankWriteTime: 637403902490000000
+  stringsBankWriteTime: 637404232383351580
   cacheVersion: 5
 --- !u!114 &368382331126053278
 MonoBehaviour:
@@ -184,7 +280,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 31250
+  Length: 61892
 --- !u!114 &1517608369307199708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODProject/gdsjam-2020/Build/Desktop/UI.bank
   Name: UI
-  lastModified: 637403902490000000
+  lastModified: 637404232383751595
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -336,6 +432,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 125000
+--- !u!114 &8940246743334805172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/game/steps
+  m_EditorClassIdentifier: 
+  Path: event:/game/steps
+  guid: 7b9a779d5ae799488c3ec5e7fd3fd47d
+  Banks:
+  - {fileID: -1173319164325957874}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 210
 --- !u!114 &9129582634093290068
 MonoBehaviour:
   m_ObjectHideFlags: 0

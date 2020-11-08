@@ -32,7 +32,7 @@ public class SoundTruthManager : MonoBehaviour
 
     private void HandleGameManagerLevelStart()
     {
-        var eventDescription = RuntimeManager.GetEventDescription(_ambienceEventRef);
+        /* var eventDescription = RuntimeManager.GetEventDescription(_ambienceEventRef);
         eventDescription.createInstance(out _ambienceEventInstance);
         
         _ambienceEventInstance.start();
@@ -40,7 +40,7 @@ public class SoundTruthManager : MonoBehaviour
         eventDescription = RuntimeManager.GetEventDescription(_dirtEventRef);
         eventDescription.createInstance(out _dirtEventInstance);
 
-        _dirtEventInstance.start();
+        _dirtEventInstance.start(); */
     }
 
     protected void Update()
