@@ -1,5 +1,4 @@
-﻿using System;
-using FMODUnity;
+﻿using FMODUnity;
 using UnityEngine;
 using Zenject;
 
@@ -32,7 +31,7 @@ public class SoundTruthManager : MonoBehaviour
 
     private void HandleGameManagerLevelStart()
     {
-        /* var eventDescription = RuntimeManager.GetEventDescription(_ambienceEventRef);
+        var eventDescription = RuntimeManager.GetEventDescription(_ambienceEventRef);
         eventDescription.createInstance(out _ambienceEventInstance);
         
         _ambienceEventInstance.start();
@@ -40,7 +39,11 @@ public class SoundTruthManager : MonoBehaviour
         eventDescription = RuntimeManager.GetEventDescription(_dirtEventRef);
         eventDescription.createInstance(out _dirtEventInstance);
 
-        _dirtEventInstance.start(); */
+        _dirtEventInstance.start();
+
+        Debug.Log(_truthDataModel.GetNormalizedCurrentTruth());
+        RuntimeManager.StudioSystem.setParameterByName(_truthAmountParameterRef,
+            _truthDataModel.GetNormalizedCurrentTruth());
     }
 
     protected void Update()
