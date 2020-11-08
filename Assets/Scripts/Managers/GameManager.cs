@@ -48,6 +48,11 @@ public class GameManager : MonoBehaviour
 
         return score / maxScore;
     }
+
+    public void GameOver()
+    {
+        
+    }
     
     public void FinishGame()
     {

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Zenject;
@@ -16,12 +17,30 @@ public class SoundSense : MonoBehaviour
 
     public AnimationCurve SensitivityGradientFunction;
 
+    [EventRef, SerializeField] private string _insideNoiseEventRef = default;
+    
     [Inject] private TruthDataModel _truthDataModel = default;
     [Inject] private LevelArea _levelArea = default;
+
+    private FMOD.Studio.EventInstance _insideNoiseEventInstance;
+
+    void Start()
+    {
+        var eventDesc = RuntimeManager.GetEventDescription(_insideNoiseEventRef);
+
+        eventDesc.createInstance(out _insideNoiseEventInstance);
+
+        _insideNoiseEventInstance.start();
+        _insideNoiseEventInstance.setVolume(0.0f);
+    }
     
     void Update()
     {
-        _truthDataModel.ReduceTruthBy(getSensitivityRatio());
+        var sensitivityRatio = getSensitivityRatio();
+
+        _insideNoiseEventInstance.setVolume(sensitivityRatio * 20.0f);
+
+        _truthDataModel.ReduceTruthBy(sensitivityRatio);
     }
 
     Vector3 GetClosestPoint()

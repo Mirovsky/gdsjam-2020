@@ -181,6 +181,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _insideNoiseEventRef: event:/game/nebezpeci
 --- !u!1 &153268041432042053
 GameObject:
   m_ObjectHideFlags: 0

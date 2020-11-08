@@ -55,7 +55,7 @@ public class SoundTruthManager : MonoBehaviour
 
     protected void Update()
     {
-        RuntimeManager.StudioSystem.setParameterByName(_truthAmountParameterRef,
-            _truthDataModel.GetNormalizedCurrentTruth());
+        var truth = _truthDataModel.GetNormalizedCurrentTruth();
+        RuntimeManager.StudioSystem.setParameterByName(_truthAmountParameterRef, truth);
     }
 }
