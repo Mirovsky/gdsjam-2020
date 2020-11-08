@@ -54,5 +54,7 @@ public class GameManager : MonoBehaviour
         _endGameDataModel.SetScore(CalculateFinishScore());
         
         _scenesManager.ToEndGame();
+        
+        levelFinishedEvent?.Invoke();
     }
 }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GameScenes
   m_EditorClassIdentifier: 
   _gameScenes:
-  - Assets/Scenes/LevelTemplate.unity
+  - Assets/Scenes/Levels/LevelTemplate.unity
