@@ -14,7 +14,6 @@ public class FadeInOutManager : MonoBehaviour
     public void FadeOut(Action callback)
     {
         _fadeCanvas.gameObject.SetActive(true);
-        
         StartCoroutine(Fade(0.0f, 1.0f, callback));
     }
 
