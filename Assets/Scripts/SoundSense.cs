@@ -26,7 +26,7 @@ public class SoundSense : MonoBehaviour
 
     Vector3 GetClosestPoint()
     {
-        var collider = _levelArea.Collider;
+        var collider = _levelArea.soundCollider;
         var location = this.transform.position;
 
         Vector3 closestPoint = collider.ClosestPoint(location);
@@ -95,7 +95,7 @@ public class SoundSense : MonoBehaviour
 
     private void _drawClosestPointGizmo()
     {
-        if (this._levelArea == null || this._levelArea.Collider == null) return;
+        if (this._levelArea == null || this._levelArea.soundCollider == null) return;
 
         var location = this.transform.position;
         Vector3 closestPoint = this.GetClosestPoint();
