@@ -7,8 +7,6 @@ using Zenject;
 
 public class SoundSense : MonoBehaviour
 {
-    public TilemapCollider2D SoundMapColider;
-
     [Header("Sensitivity")]
     [Range(0.0f, 10.0f)]
     public float Sensitivity = 5;
@@ -19,6 +17,7 @@ public class SoundSense : MonoBehaviour
     public AnimationCurve SensitivityGradientFunction;
 
     [Inject] private TruthDataModel _truthDataModel = default;
+    [Inject] private LevelArea _levelArea = default;
     
     void Update()
     {
@@ -27,7 +26,7 @@ public class SoundSense : MonoBehaviour
 
     Vector3 GetClosestPoint()
     {
-        var collider = this.SoundMapColider;
+        var collider = _levelArea.Collider;
         var location = this.transform.position;
 
         Vector3 closestPoint = collider.ClosestPoint(location);
@@ -96,7 +95,7 @@ public class SoundSense : MonoBehaviour
 
     private void _drawClosestPointGizmo()
     {
-        if (!this.SoundMapColider) return;
+        if (this._levelArea == null || this._levelArea.Collider == null) return;
 
         var location = this.transform.position;
         Vector3 closestPoint = this.GetClosestPoint();

@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _collider2DEvents: {fileID: 153268041432042072}
   _transferSpeedPerSecond: 25
+  _transferEventRef: event:/game/interaction
 --- !u!114 &5344656511730669341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3f7b0adf36d44dd850d8920edb86f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoundMapColider: {fileID: 0}
   Sensitivity: 1.15
   SensitivityGradientRange: 1
   SensitivityGradientFunction:
