@@ -14,12 +14,12 @@ public class EndGameMeterManager : MonoBehaviour
     public float ScoreRatio;
 
     [Range(0.0f, 100.0f)]
-    public float HorzontalDistance = 10;
+    public float HorzontalDistance = 60;
 
     [Range(0.0f, 100.0f)]
-    public float VerticalDistance = 10;
+    public float VerticalDistance = 80;
 
-    private int columns = 6;
+    public int Columns = 6;
     private List<GameObject> items = new List<GameObject>();
 
 
@@ -34,12 +34,12 @@ public class EndGameMeterManager : MonoBehaviour
 
         bool isTailUsed = false; // Totální píčovina.
 
-        int y = -1;
+        float y = -1;
         for (int i = 0; i < Count; i++)
         {
             var j = i % columns;
             if (j == 0) y++;
-            int x = (j - columns / 2);
+            float x = ((float)j - (float)columns / 2) + 0.5f;
             var item = instanceItem(new Vector2(x * HorzontalDistance, y * -VerticalDistance));
             items.Add(item);
 
@@ -68,6 +68,7 @@ public class EndGameMeterManager : MonoBehaviour
 
     private GameObject instanceItem(Vector2 pos)
     {
+        Debug.Log(pos.x);
         var item = Instantiate(MeterItemPrefab, new Vector2(0, 0), Quaternion.identity);
         item.transform.SetParent(this.transform);
         item.transform.localPosition = new Vector2(pos.x, pos.y);
