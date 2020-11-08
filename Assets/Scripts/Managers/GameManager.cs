@@ -7,6 +7,9 @@ using Zenject;
 public class GameManager : MonoBehaviour
 {
     [Inject] private FadeInOutManager _fadeInOutManager = default;
+    [Inject] private EndGameDataModel _endGameDataModel = default;
+    [Inject] private TruthDataModel _truthDataModel = default;
+    [Inject] private ScenesManager _scenesManager = default;
     
     public event Action levelLoadedEvent;
     public event Action levelStartEvent;
@@ -23,6 +26,8 @@ public class GameManager : MonoBehaviour
     
     protected void Start()
     {
+        _endGameDataModel.Clear();
+        
         levelLoadedEvent?.Invoke();
         
         _fadeInOutManager.FadeIn(() =>
@@ -38,20 +43,16 @@ public class GameManager : MonoBehaviour
 
     public float CalculateFinishScore()
     {
-        return _truthAgents.Sum(agent => agent.truthAmount);
+        var maxScore = _truthAgents.Count * _truthDataModel.GetMaxTruth();
+        var score = _truthAgents.Sum(agent => agent.truthAmount);
+
+        return score / maxScore;
     }
     
     public void FinishGame()
     {
-        // TODO: Not Implemented!
-
-        Debug.Log(CalculateFinishScore());
+        _endGameDataModel.SetScore(CalculateFinishScore());
         
-        throw new NotImplementedException();
-        
-        /* _fadeInOutManager.FadeOut(() =>
-        {
-            levelFinishedEvent?.Invoke();
-        }); */
+        _scenesManager.ToEndGame();
     }
 }

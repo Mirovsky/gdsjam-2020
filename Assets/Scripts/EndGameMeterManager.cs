@@ -60,13 +60,6 @@ public class EndGameMeterManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
     private GameObject instanceItem(Vector2 pos)
     {
         var item = Instantiate(MeterItemPrefab, new Vector2(0, 0), Quaternion.identity);

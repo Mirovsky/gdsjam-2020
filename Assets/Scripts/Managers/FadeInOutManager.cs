@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FadeInOutManager : MonoBehaviour
 {
+    [SerializeField] private Canvas _fadeCanvas = default;
     [SerializeField] private CanvasGroup _fadeCanvasGroup = default;
 
     [Space]
@@ -12,11 +13,15 @@ public class FadeInOutManager : MonoBehaviour
 
     public void FadeOut(Action callback)
     {
+        _fadeCanvas.gameObject.SetActive(true);
+        
         StartCoroutine(Fade(0.0f, 1.0f, callback));
     }
 
     public void FadeIn(Action callback)
     {
+        _fadeCanvas.gameObject.SetActive(true);
+        
         StartCoroutine(Fade(1.0f, 0.0f, callback));
     }
 
@@ -32,6 +37,11 @@ public class FadeInOutManager : MonoBehaviour
         }
 
         _fadeCanvasGroup.alpha = toAlpha;
+
+        if (Mathf.Approximately(_fadeCanvasGroup.alpha, 0.0f))
+        {
+            _fadeCanvas.gameObject.SetActive(false);
+        }
         
         callback?.Invoke();
     }

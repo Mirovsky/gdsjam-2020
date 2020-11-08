@@ -11,7 +11,7 @@ public class ButtonClickSound : MonoBehaviour
     
     void Start()
     {
-        _button.onClick.RemoveAllListeners();
+        _button.onClick.RemoveListener(HandleButtonOnClick);
         _button.onClick.AddListener(HandleButtonOnClick);
     }
 

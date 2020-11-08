@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7b08a5637c3d24aa9a7fd087f9f79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fadeCanvas: {fileID: 3043343611459386375}
   _fadeCanvasGroup: {fileID: 3043343611459386370}
   _fadeDuration: 0.4
   _fadeCurve:

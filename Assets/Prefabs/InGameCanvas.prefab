@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 5718333148211332558}
   - component: {fileID: 5718333148211332559}
   - component: {fileID: 5718333148211332560}
+  - component: {fileID: 4273401198019844478}
   m_Layer: 5
   m_Name: InGameCanvas
   m_TagString: Untagged
@@ -212,6 +213,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4273401198019844478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5718333148211332561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae701bc5b71a9140aa86398b477857b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pauseUI: {fileID: 5718333148243308001}
+  _inGameUI: {fileID: 5718333149720073000}
 --- !u!1 &5718333148243308001
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5718333148243308000
 RectTransform:
   m_ObjectHideFlags: 0
@@ -368,7 +383,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5718333148371748716}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4273401198019844478}
+        m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &583773943716956260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,7 +529,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5718333148709969058}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4273401198019844478}
+        m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &277116544638627234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,7 +675,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5718333149102883098}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4273401198019844478}
+        m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3751639940419931530
 MonoBehaviour:
   m_ObjectHideFlags: 0

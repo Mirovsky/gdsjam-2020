@@ -19,6 +19,7 @@ public class SoundTruthManager : MonoBehaviour
     protected void Start()
     {
         _gameManager.levelStartEvent += HandleGameManagerLevelStart;
+        _gameManager.levelFinishedEvent += HandleGameManagerLevelFinished;
     }
 
     protected void OnDestroy()
@@ -26,6 +27,7 @@ public class SoundTruthManager : MonoBehaviour
         if (_gameManager != null)
         {
             _gameManager.levelStartEvent -= HandleGameManagerLevelStart;
+            _gameManager.levelFinishedEvent -= HandleGameManagerLevelFinished;
         }
     }
 
@@ -41,9 +43,14 @@ public class SoundTruthManager : MonoBehaviour
 
         _dirtEventInstance.start();
 
-        Debug.Log(_truthDataModel.GetNormalizedCurrentTruth());
         RuntimeManager.StudioSystem.setParameterByName(_truthAmountParameterRef,
             _truthDataModel.GetNormalizedCurrentTruth());
+    }
+
+    private void HandleGameManagerLevelFinished()
+    {
+        _ambienceEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        _dirtEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     protected void Update()
