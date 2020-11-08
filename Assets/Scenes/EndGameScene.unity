@@ -1411,7 +1411,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: Good Job
 --- !u!222 &1794430607
 CanvasRenderer:
   m_ObjectHideFlags: 0
