@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 9003193882929110741}
   - component: {fileID: 2164545872959219664}
   - component: {fileID: 3997474376301094597}
+  - component: {fileID: 9085852050152998208}
   m_Layer: 0
   m_Name: TruthAgentVisuals
   m_TagString: Untagged
@@ -236,3 +237,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9085852050152998208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2430422317049887662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f378c92a94751459b1756b93821c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stepEventRef: event:/game/steps

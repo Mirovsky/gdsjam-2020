@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Zenject;
 
 public class TruthDataModel : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class TruthDataModel : MonoBehaviour
     [Space]
     [SerializeField, Range(0, 100)] private float _truthAmount = default;
 
+    [Inject] private GameManager _gameManager = default;
+    
     void Start()
     {
         _truthAmount = _truthData.defaultTruthAmount;
@@ -17,6 +20,11 @@ public class TruthDataModel : MonoBehaviour
         _truthAmount -= _truthData.baseTruthReducePerSecond * reduceMult * Time.deltaTime;
 
         _truthAmount = Mathf.Clamp(_truthAmount, 0.0f, _truthData.defaultTruthAmount);
+
+        if (_truthAmount <= 0.0f)
+        {
+            _gameManager.GameOver();
+        }
     }
 
     public float GetCurrentTruth()

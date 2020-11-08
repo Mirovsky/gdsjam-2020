@@ -43,7 +43,12 @@ public class GameManager : MonoBehaviour
 
     public float CalculateFinishScore()
     {
-        var maxScore = _truthAgents.Count * _truthDataModel.GetMaxTruth();
+        if (_truthAgents.Count == 0)
+        {
+            return 0.0f;
+        }
+        
+        var maxScore = _truthAgents.Count > 0 ? _truthAgents.Count * _truthDataModel.GetMaxTruth() : 0.0f;
         var score = _truthAgents.Sum(agent => agent.truthAmount);
 
         return score / maxScore;
@@ -51,11 +56,15 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        _endGameDataModel.gameOver = true;
+        _scenesManager.ToEndGame();
         
+        levelFinishedEvent?.Invoke();
     }
     
     public void FinishGame()
     {
+        _endGameDataModel.count = _truthAgents.Count;
         _endGameDataModel.SetScore(CalculateFinishScore());
         
         _scenesManager.ToEndGame();
