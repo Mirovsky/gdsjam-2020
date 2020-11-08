@@ -369,6 +369,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ae06c5b100f7b4da3af019e4467c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &927347613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2430422317049887662, guid: 8bd352716a4c2fe47816fa46ac84150c, type: 3}
+  m_PrefabInstance: {fileID: 2127710166563159319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &927347614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927347613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f378c92a94751459b1756b93821c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stepEventRef: event:/game/steps
 --- !u!1 &995761378
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collider: {fileID: 995761379}
-  _soundCollider: {fileID: 0}
+  _soundCollider: {fileID: 1613924495}
 --- !u!4 &995761381
 Transform:
   m_ObjectHideFlags: 0

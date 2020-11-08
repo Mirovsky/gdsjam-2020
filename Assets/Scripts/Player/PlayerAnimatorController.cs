@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerAnimatorController : MonoBehaviour
 {
@@ -18,7 +16,7 @@ public class PlayerAnimatorController : MonoBehaviour
         absSpeedAnimatorId = Animator.StringToHash("AbsSpeed");
     }
     
-    protected void Update()
+    protected void FixedUpdate()
     {
         var input = _playerInput.movementInput;
         _animator.SetFloat(xAnimatorId, input.x);

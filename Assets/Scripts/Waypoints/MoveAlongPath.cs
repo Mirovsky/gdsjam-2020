@@ -11,6 +11,8 @@ public class MoveAlongPath : MonoBehaviour
     [SerializeField] private MoveAlongPathBehaviour _moveAlongPathBehaviour = default;
     [SerializeField] private float _speed = default;
 
+    public Vector3 direction => (_rigidbody2D.position - _prevPosition).normalized;
+    
     private enum MoveAlongPathBehaviour
     {
         Loop,
@@ -20,11 +22,18 @@ public class MoveAlongPath : MonoBehaviour
     
     private int _currentWaypointId = 0;
     private int _direction = 1;
+    private Vector2 _prevPosition;
+
+    protected void Start()
+    {
+        _prevPosition = _rigidbody2D.position;
+    }
     
-    protected void Update()
+    protected void FixedUpdate()
     {
         UpdateWaypointId();
 
+        _prevPosition = _rigidbody2D.position;
         _rigidbody2D.MovePosition(GetPointOnPath());
     }
 
