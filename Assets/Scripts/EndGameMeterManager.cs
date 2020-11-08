@@ -37,9 +37,9 @@ public class EndGameMeterManager : MonoBehaviour
         float y = -1;
         for (int i = 0; i < Count; i++)
         {
-            var j = i % columns;
+            var j = i % Columns;
             if (j == 0) y++;
-            float x = ((float)j - (float)columns / 2) + 0.5f;
+            float x = ((float)j - (float)Columns / 2) + 0.5f;
             var item = instanceItem(new Vector2(x * HorzontalDistance, y * -VerticalDistance));
             items.Add(item);
 
@@ -68,7 +68,6 @@ public class EndGameMeterManager : MonoBehaviour
 
     private GameObject instanceItem(Vector2 pos)
     {
-        Debug.Log(pos.x);
         var item = Instantiate(MeterItemPrefab, new Vector2(0, 0), Quaternion.identity);
         item.transform.SetParent(this.transform);
         item.transform.localPosition = new Vector2(pos.x, pos.y);
