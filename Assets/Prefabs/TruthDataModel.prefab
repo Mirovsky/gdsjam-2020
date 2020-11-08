@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _truthData: {fileID: 11400000, guid: 5670de9ec9f230743be78414c5ea78e4, type: 2}
   _truthAmount: 0
+  _gameOverEventRef: event:/game/game over

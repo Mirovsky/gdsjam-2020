@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FMODUnity;
+using UnityEngine;
 using Zenject;
 
 public class TruthDataModel : MonoBehaviour
@@ -8,6 +9,8 @@ public class TruthDataModel : MonoBehaviour
     [Space]
     [SerializeField, Range(0, 100)] private float _truthAmount = default;
 
+    [EventRef, SerializeField] private string _gameOverEventRef;
+    
     [Inject] private GameManager _gameManager = default;
     
     void Start()
@@ -23,6 +26,7 @@ public class TruthDataModel : MonoBehaviour
 
         if (_truthAmount <= 0.0f)
         {
+            RuntimeManager.PlayOneShot(_gameOverEventRef);
             _gameManager.GameOver();
         }
     }

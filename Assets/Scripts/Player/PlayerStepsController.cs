@@ -17,7 +17,6 @@ public class PlayerStepsController : MonoBehaviour
         }
         _triggeredFrame = Time.frameCount;
         
-        Debug.Log("step");
         FMODUnity.RuntimeManager.PlayOneShot(_stepEventRef);
     }
 }

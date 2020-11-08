@@ -20,7 +20,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -3327635879119705396}
+  - {fileID: 963128733287331932}
   MinDistance: 0
   MaxDistance: 0
   Length: 31250
@@ -127,7 +127,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 8451152144584966405}
+  - {fileID: -5414034136514811787}
   MinDistance: 0
   MaxDistance: 0
   Length: 250
@@ -147,13 +147,13 @@ MonoBehaviour:
   guid: c2d1e16d4da7104e94415ebb261061d2
   Banks:
   - {fileID: -1173319164325957874}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 19494
+  Length: 4300
 --- !u!114 &-6316463315178817779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +177,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-5414034136514811787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/interaction/instancedTruth
+  m_EditorClassIdentifier: 
+  Name: instancedTruth
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-3670005558829944736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +262,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-2275542198160704664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,9 +277,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODProject/gdsjam-2020/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637404387740000000
+  lastModified: 637404527876841277
   LoadResult: 0
-  FileSizes: []
+  FileSizes:
+  - Name: Desktop
+    Value: 1574
   Exists: 1
 --- !u!114 &-1957992451763560535
 MonoBehaviour:
@@ -295,7 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODProject/gdsjam-2020/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637404387740000000
+  lastModified: 637404527876751284
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -330,12 +352,14 @@ MonoBehaviour:
   - {fileID: -3670005558829944736}
   - {fileID: -8959438208517842159}
   - {fileID: -7175572194696947910}
-  EditorParameters: []
+  - {fileID: 1809493419430347657}
+  EditorParameters:
+  - {fileID: 4781232879943125655}
   MasterBanks:
   - {fileID: -1173319164325957874}
   StringsBanks:
   - {fileID: -2275542198160704664}
-  stringsBankWriteTime: 637404387740000000
+  stringsBankWriteTime: 637404527876841277
   cacheVersion: 5
 --- !u!114 &368382331126053278
 MonoBehaviour:
@@ -360,6 +384,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &963128733287331932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/spina 3/Fires
+  m_EditorClassIdentifier: 
+  Name: Fires
+  Min: 0
+  Max: 1
+  Default: 0.5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &972874730759416572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,6 +449,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &1809493419430347657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/game/game over
+  m_EditorClassIdentifier: 
+  Path: event:/game/game over
+  guid: efe73246174cc64fb5350f7bf17b8d23
+  Banks:
+  - {fileID: -1173319164325957874}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3632
 --- !u!114 &2827499265380547380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,6 +494,46 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &4039729822328951737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/interaction/instancedTruth
+  m_EditorClassIdentifier: 
+  Name: instancedTruth
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &4781232879943125655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/truthAmount
+  m_EditorClassIdentifier: 
+  Name: truthAmount
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3845411710
+    data2: 808002245
+  Exists: 1
 --- !u!114 &4918148013218022198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,6 +557,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 125000
+--- !u!114 &5582722487256290113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/spina 3/Fires
+  m_EditorClassIdentifier: 
+  Name: Fires
+  Min: 0
+  Max: 1
+  Default: 0.5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &5739847741457705247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,7 +591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODProject/gdsjam-2020/Build/Desktop/UI.bank
   Name: UI
-  lastModified: 637403902490000000
+  lastModified: 637404527877571274
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -530,7 +657,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &8801189777052902890
 MonoBehaviour:
   m_ObjectHideFlags: 0
