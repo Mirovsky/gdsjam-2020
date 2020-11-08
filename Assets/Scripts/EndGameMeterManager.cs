@@ -9,10 +9,10 @@ public class EndGameMeterManager : MonoBehaviour
     private GameObject MeterItemPrefab;
 
     [Header("Settings")]
-    public int Count;
-    [Range(0.0f, 1.0f)]
-    public float ScoreRatio;
+    public float Score;
 
+    public int Count;
+    
     [Range(0.0f, 100.0f)]
     public float HorzontalDistance = 60;
 
@@ -26,8 +26,9 @@ public class EndGameMeterManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        float amount = (float)Count * ScoreRatio;
+        Debug.Log($"{Score}, {Count}");
+        
+        float amount = (float)Score;
         int filled = (int) amount;
         float tail = amount - (float) filled;
 
@@ -42,8 +43,7 @@ public class EndGameMeterManager : MonoBehaviour
             float x = ((float)j - (float)Columns / 2) + 0.5f;
             var item = instanceItem(new Vector2(x * HorzontalDistance, y * -VerticalDistance));
             items.Add(item);
-
-
+            
             float s = 0;
 
              if ((float)i + 1 <= filled) {

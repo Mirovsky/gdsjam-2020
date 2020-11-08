@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using FMODUnity;
+﻿using FMODUnity;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 using Zenject;
 
 
@@ -21,6 +18,7 @@ public class SoundSense : MonoBehaviour
     
     [Inject] private TruthDataModel _truthDataModel = default;
     [Inject] private LevelArea _levelArea = default;
+    [Inject] private GameManager _gameManager = default;
 
     private FMOD.Studio.EventInstance _insideNoiseEventInstance;
 
@@ -30,10 +28,22 @@ public class SoundSense : MonoBehaviour
 
         eventDesc.createInstance(out _insideNoiseEventInstance);
 
+        _gameManager.levelFinishedEvent += HandleGameManagerLevelFinished;
+        
         _insideNoiseEventInstance.start();
         _insideNoiseEventInstance.setVolume(0.0f);
     }
-    
+
+    private void OnDestroy()
+    {
+        _gameManager.levelFinishedEvent -= HandleGameManagerLevelFinished;
+    }
+
+    private void HandleGameManagerLevelFinished()
+    {
+        _insideNoiseEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
     void Update()
     {
         var sensitivityRatio = getSensitivityRatio();
